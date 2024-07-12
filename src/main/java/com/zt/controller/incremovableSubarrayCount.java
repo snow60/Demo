@@ -43,7 +43,8 @@ public class incremovableSubarrayCount {
         while (i < n - 1 && a[i] < a[i + 1]) {
             i++;
         }
-        if (i == n - 1) { // 每个非空子数组都可以移除
+        // 每个非空子数组都可以移除
+        if (i == n - 1) {
             return n * (n + 1) / 2;
         }
 
@@ -59,5 +60,3 @@ public class incremovableSubarrayCount {
         return ans;
     }
 }
-
-
