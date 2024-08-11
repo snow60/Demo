@@ -61,7 +61,6 @@ public class twoSum {
                 return new int[]{hashtable.get(target - nums[i]), i};
             }
             hashtable.put(nums[i], i);
-            System.out.println("哈希表：" + hashtable);
         }
         return new int[0];
 
