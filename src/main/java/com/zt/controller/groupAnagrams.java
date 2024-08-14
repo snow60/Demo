@@ -38,7 +38,7 @@ public class groupAnagrams {
      利用hash的键值，排序后的字符串作为key，值是未进行排序的List
      */
     public static List<List<String>> groupAnagrams(String[] strs) {
-        Map<String, List<String>> map = new HashMap<String, List<String>>();
+        HashMap<String, List<String>> map = new HashMap<>();
         for (String str : strs) {
             // 变成字符进行排序
             char[] array = str.toCharArray();
