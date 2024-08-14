@@ -33,7 +33,10 @@ public class groupAnagrams {
         System.out.println(groupAnagrams(strs));
     }
 
-    // 思路：字符串转为字符
+    /*
+     思路：字符串转为字符然后组合进行排序
+     利用hash的键值，排序后的字符串作为key，值是未进行排序的List
+     */
     public static List<List<String>> groupAnagrams(String[] strs) {
         Map<String, List<String>> map = new HashMap<String, List<String>>();
         for (String str : strs) {
@@ -41,7 +44,7 @@ public class groupAnagrams {
             char[] array = str.toCharArray();
             Arrays.sort(array);
             String key = new String(array);
-            // 如果不存在则返回空的列表
+            // 排序后的字符串作为key，值是未进行排序的List
             List<String> list = map.getOrDefault(key, new ArrayList<String>());
             list.add(str);
             map.put(key, list);
