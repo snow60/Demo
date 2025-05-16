@@ -63,6 +63,5 @@ public class twoSum {
             hashtable.put(nums[i], i);
         }
         return new int[0];
-
     }
 }

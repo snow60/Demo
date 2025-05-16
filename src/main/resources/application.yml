@@ -1,0 +1,15 @@
+spring:
+  data:
+    redis:
+      # 连接 Redis 的主机和端口
+      host: 172.29.210.9
+      port: 6379
+      password: 123456 # 如果有密码的话
+      timeout: 300ms # 连接超时时间（毫秒）
+      # 设置连接池配置（如果使用连接池的话）
+      pool:
+        max-active: 10
+        max-idle: 5
+        min-idle: 1
+        max-wait: 1000ms
+    # 设置 Redis 的序列化方式
